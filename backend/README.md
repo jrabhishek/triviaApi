@@ -66,14 +66,16 @@ One note before you delve into your tasks: for each endpoint you are expected to
 8. Create a POST endpoint to get questions to play the quiz. This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
 9. Create error handlers for all expected errors including 400, 404, 422 and 500. 
 
-###Endpoints
+## Endpoints
 
-##GET
-```
-GET '/questions'
--Fetches all the question
-Get '/questions?page=1'
+### GET
+
+#### GET '/questions'
+Fetches all the question
+
 -fetches 10 question per page you have to provide a query parameter page with a integer value
+```
+GET '/questions?page=1'
 sample responce
 {
   "categories": [
@@ -127,13 +129,10 @@ sample responce
   "total_questions": 11
 }
 ```
+
 ```
 
-Endpoints
-GET '/categories'
-GET ...
-POST ...
-DELETE ...
+#### GET '/categories'
 
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
@@ -148,6 +147,40 @@ GET '/categories'
 
 ```
 
+#### GET 'categories/<category_id>
+
+fetches all the question of that particula type
+
+```
+#### GET 'categories/2'
+
+responce
+
+{
+  "current_category": null,
+  "questions": [
+    {
+      "answer": "ads",
+      "category": "art",
+      "difficulty": 5,
+      "id": 9,
+      "question": "awdawd"
+    },
+    {
+      "answer": "e",
+      "category": "art",
+      "difficulty": 2,
+      "id": 14,
+      "question": "e"
+    }
+  ],
+  "total_questions": 2
+}
+
+
+```
+
+### POST
 
 ## Testing
 To run the tests, run
