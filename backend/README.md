@@ -66,9 +66,68 @@ One note before you delve into your tasks: for each endpoint you are expected to
 8. Create a POST endpoint to get questions to play the quiz. This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
 9. Create error handlers for all expected errors including 400, 404, 422 and 500. 
 
-REVIEW_COMMENT
+###Endpoints
+
+##GET
 ```
-This README is missing documentation of your endpoints. Below is an example for your endpoint to get all categories. Please use it as a reference for creating your documentation and resubmit your code. 
+GET '/questions'
+-Fetches all the question
+Get '/questions?page=1'
+-fetches 10 question per page you have to provide a query parameter page with a integer value
+sample responce
+{
+  "categories": [
+    {
+      "id": 3,
+      "type": "science"
+    },
+    {
+      "id": 2,
+      "type": "art"
+    }
+  ],
+  "current_category": "science",
+  "questions": [
+    {
+      "answer": "jj",
+      "category": "science",
+      "difficulty": 1,
+      "id": 8,
+      "question": "jj"
+    },
+    {
+      "answer": "ads",
+      "category": "art",
+      "difficulty": 5,
+      "id": 9,
+      "question": "awdawd"
+    },
+    {
+      "answer": "mm",
+      "category": "science",
+      "difficulty": 1,
+      "id": 11,
+      "question": "mm"
+    },
+    {
+      "answer": "e",
+      "category": "art",
+      "difficulty": 2,
+      "id": 14,
+      "question": "e"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 23,
+      "question": "what"
+    }
+  ],
+  "total_questions": 11
+}
+```
+```
 
 Endpoints
 GET '/categories'
