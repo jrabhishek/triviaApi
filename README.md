@@ -14,18 +14,6 @@ That's where you come in! Help them finish the trivia app so they can start hold
 
 Completing this trivia app will give you the ability to structure plan, implement, and test an API - skills essential for enabling your future applications to communicate with others. 
 
-## Tasks
-
-There are `TODO` comments throughout project. Start by reading the READMEs in:
-
-1. [`./frontend/`](./frontend/README.md)
-2. [`./backend/`](./backend/README.md)
-
-We recommend following the instructions in those files in order. This order will look familiar from our prior work in the course.
-
-## Starting and Submitting the Project
-
-[Fork](https://help.github.com/en/articles/fork-a-repo) the [project repository]() and [Clone](https://help.github.com/en/articles/cloning-a-repository) your forked repository to your machine. Work on the project locally and make sure to push all your changes to the remote repository before submitting the link to your repository in the Classroom. 
 
 ## About the Stack
 
