@@ -190,7 +190,7 @@ responce
                       body:{"searchTerm":<question to be search>}
  ```
  POST /questions 
- body={"searchTerm":<question to be search>}
+ body={"searchTerm":"question to be search"}
  
  responce
  
