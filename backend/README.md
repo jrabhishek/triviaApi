@@ -130,10 +130,9 @@ sample responce
 }
 ```
 
-```
 
 #### GET '/categories'
-
+```
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
@@ -149,7 +148,9 @@ GET '/categories'
 
 #### GET 'categories/<category_id>
 
-fetches all the question of that particula type
+- fetches all the question of that particular type
+- Request Arguments: None
+
 
 ```
 #### GET 'categories/2'
@@ -181,6 +182,68 @@ responce
 ```
 
 ### POST
+
+
+#### /questions
+- Search a question with the search term
+- Request Arguments: type:json
+                      body:{"searchTerm":<question to be search>}
+ ```
+ POST /questions 
+ body={"searchTerm":<question to be search>}
+ 
+ responce
+ 
+ {
+  "current_category": "science",
+  "questions": [
+    {
+      "answer": "ads",
+      "category": "art",
+      "difficulty": 5,
+      "id": 9,
+      "question": "awdawd"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 17,
+      "question": "what"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 18,
+      "question": "what"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 19,
+      "question": "what"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 20,
+      "question": "what"
+    },
+    {
+      "answer": "no",
+      "category": "science",
+      "difficulty": 1,
+      "id": 24,
+      "question": "what"
+    }
+  ],
+  "total_questions": 8
+}
+ 
+ ```
 
 ## Testing
 To run the tests, run
