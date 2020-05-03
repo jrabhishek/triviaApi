@@ -91,6 +91,17 @@ class TriviaTestCase(unittest.TestCase):
        res = self.client().post('/quizzes',json={"body":"body"})
        data = json.loads(res.data)
        self.assertEqual(res.status_code,422)
+
+    def test_422_not_processable_add(self):
+       res = self.client().post('/add',json={"body":"body"})
+       data = json.loads(res.data)
+       self.assertEqual(data['success'],False)
+       self.assertEqual(res.status_code,422)
+
+    def test_404_not_found_category(self):
+       res = self.client().get('/categories/we')
+       data = json.loads(res.data)
+       self.assertEqual(res.status_code,404)      
            
 
 
