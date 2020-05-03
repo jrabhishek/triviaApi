@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from sqlalchemy import func
 import random
-
+from models import setup_db, Question, Category
 
 def create_app(test_config=None):
   # create and configure the app
